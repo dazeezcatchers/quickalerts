@@ -89,8 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_marginRight="7dp"
+        android:layout_toLeftOf="@+id/button2"
         android:background="@color/grayline"
         android:onClick="submit"
         android:text="Submit"
@@ -102,7 +101,6 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="12dp"
         android:background="@color/grayline"
         android:text="Update Case"
         android:textColor="@color/white" />

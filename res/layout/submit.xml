@@ -4,17 +4,6 @@
     android:layout_height="match_parent"
     android:background="@color/graybg" >
 
-    <TextView
-        android:id="@+id/idText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Create a new case report"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
-
     <RadioGroup
         android:id="@+id/ratingRadios"
         android:layout_width="fill_parent"
@@ -67,17 +56,6 @@
         android:textColor="@color/white" />
 
     <TextView
-        android:id="@+id/locText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ratingRadios"
-        android:layout_marginTop="60dp"
-        android:text="Type of Disease:"
-        android:textColor="@color/white"
-        android:textStyle="italic" />
-
-    <TextView
         android:id="@+id/dateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -87,12 +65,97 @@
         android:textColor="@color/white"
         android:textStyle="italic" />
 
+    <Button
+        android:id="@+id/button4"
+        style="@color/redish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/grayline"
+        android:text="Settings"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/button4"
+        android:layout_toRightOf="@+id/button2"
+        android:background="@color/grayline"
+        android:onClick="viewData"
+        android:text="View Data"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/idText"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="9dp"
+        android:layout_toLeftOf="@+id/button1"
+        android:background="@color/grayline"
+        android:onClick="submit"
+        android:text="Submit"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/idText"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="@color/grayline"
+        android:text="Update Case"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/idText"
+        android:layout_marginTop="10dp"
+        android:text="Location:"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/idText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button4"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="Create a new case report"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="9dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Enter Location of case report" >
+
+        <requestFocus />
+    </EditText>
+
     <RadioGroup
         android:id="@+id/locationRadio"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal" >
 
         <RadioButton
@@ -128,85 +191,25 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/locText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_marginBottom="20dp"
-        android:text="Location:"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ratingRadios"
+        android:layout_marginTop="42dp"
+        android:text="Type of Disease:"
         android:textColor="@color/white"
         android:textStyle="italic" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/idText"
-        android:layout_alignRight="@+id/idText"
-        android:layout_below="@+id/idText"
-        android:layout_marginTop="54dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Enter Location of case report" >
-
-        <requestFocus />
-    </EditText>
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_alignRight="@+id/editText1"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/locText"
+        android:layout_marginTop="9dp"
         android:background="@color/white"
         android:ems="10"
         android:hint="Enter Disease Type" />
-    <Button
-        android:id="@+id/button4"
-        style="@color/redish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/grayline"
-        android:text="Settings"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/button4"
-        android:layout_toRightOf="@+id/button3"
-        android:background="@color/grayline"
-        android:text="Update Case"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="24dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:background="@color/grayline"
-        android:onClick="viewData"
-        android:text="View Data"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/Button01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="16dp"
-        android:layout_toLeftOf="@+id/button1"
-        android:background="@color/grayline"
-        android:onClick="submit"
-        android:text="Submit"
-        android:textColor="@color/white" />
     
     </RelativeLayout>
